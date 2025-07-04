@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morse Keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">Virtual Keyboard For Morse Code</div>
+    <div class="keyboard-container">
+        <div class="keyboard-layout q-layout active">
+            <div class="row number-row">
+                <button class="key" onclick="clk(this)">1 <br>. _ _ _ _</button>
+                <button class="key" onclick="clk(this)">2 <br>. . _ _ _</button>
+                <button class="key" onclick="clk(this)">3 <br>. . . _ _</button>
+                <button class="key" onclick="clk(this)">4 <br>. . . . _</button>
+                <button class="key" onclick="clk(this)">5 <br>. . . . .</button>
+                <button class="key" onclick="clk(this)">6 <br>_ . . . .</button>
+                <button class="key" onclick="clk(this)">7 <br>_ _ . . .</button>
+                <button class="key" onclick="clk(this)">8 <br>_ _ _ . .</button>
+                <button class="key" onclick="clk(this)">9 <br>_ _ _ _ .</button>
+                <button class="key" onclick="clk(this)">0 <br>_ _ _ _ _</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clk(this)">Q <br>_ _ . _</button>
+                <button class="key" onclick="clk(this)">W <br>. _ _</button>
+                <button class="key" onclick="clk(this)">E <br>.</button>
+                <button class="key" onclick="clk(this)">R <br>. _ .</button>
+                <button class="key" onclick="clk(this)">T <br> _</button>
+                <button class="key" onclick="clk(this)">Y <br>_ . _ _</button>
+                <button class="key" onclick="clk(this)">U <br>. . _ </button>
+                <button class="key" onclick="clk(this)">I <br>. .</button>
+                <button class="key" onclick="clk(this)">O <br>_ _ _</button>
+                <button class="key" onclick="clk(this)">P <br>. _ _ .</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clk(this)">A <br>. _</button>
+                <button class="key" onclick="clk(this)">S <br>. . .</button>
+                <button class="key" onclick="clk(this)">D <br>_ . .</button>
+                <button class="key" onclick="clk(this)">F <br>. . _ .</button>
+                <button class="key" onclick="clk(this)">G <br>_ _ .</button>
+                <button class="key" onclick="clk(this)">H <br>. . . .</button>
+                <button class="key" onclick="clk(this)">J <br>. _ _ _</button>
+                <button class="key" onclick="clk(this)">K <br>_ . _</button>
+                <button class="key" onclick="clk(this)">L <br>. _ . .</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clk(this)">Z <br>_ _ . .</button>
+                <button class="key" onclick="clk(this)">X <br>_ . . _</button>
+                <button class="key" onclick="clk(this)">C <br>_ . _ .</button>
+                <button class="key" onclick="clk(this)">V <br>. . . _</button>
+                <button class="key" onclick="clk(this)">B <br>_ . . .</button>
+                <button class="key" onclick="clk(this)">N <br>_ . </button>
+                <button class="key" onclick="clk(this)">M <br>_ _</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p id="result"></p>
+
+    <script>
+        function clk(button) 
+        {
+            const buttonText = button.innerText;
+            document.getElementById('result').innerText = 'You clicked: ' + buttonText;
+        }
+    </script>
+
+</body>
+</html>

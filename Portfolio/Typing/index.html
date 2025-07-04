@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morse Keyboard Typing</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <a href="..\Index.html" class="home-link">
+        <i class="fas fa-home"></i>
+        Home
+    </a>
+    <div class="title">Virtual Keyboard</div>
+    <div class="keyboard-container">
+        <div class="keyboard-layout q-layout active">
+            <div class="row number-row">
+                <button class="key" onclick="clk(this)">1 <br>. _ _ _ _</button>
+                <button class="key" onclick="clk(this)">2 <br>. . _ _ _</button>
+                <button class="key" onclick="clk(this)">3 <br>. . . _ _</button>
+                <button class="key" onclick="clk(this)">4 <br>. . . . _</button>
+                <button class="key" onclick="clk(this)">5 <br>. . . . .</button>
+                <button class="key" onclick="clk(this)">6 <br>_ . . . .</button>
+                <button class="key" onclick="clk(this)">7 <br>_ _ . . .</button>
+                <button class="key" onclick="clk(this)">8 <br>_ _ _ . .</button>
+                <button class="key" onclick="clk(this)">9 <br>_ _ _ _ .</button>
+                <button class="key" onclick="clk(this)">0 <br>_ _ _ _ _</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clk(this)">Q <br>_ _ . _</button>
+                <button class="key" onclick="clk(this)">W <br>. _ _</button>
+                <button class="key" onclick="clk(this)">E <br>.</button>
+                <button class="key" onclick="clk(this)">R <br>. _ .</button>
+                <button class="key" onclick="clk(this)">T <br> _</button>
+                <button class="key" onclick="clk(this)">Y <br>_ . _ _</button>
+                <button class="key" onclick="clk(this)">U <br>. . _ </button>
+                <button class="key" onclick="clk(this)">I <br>. .</button>
+                <button class="key" onclick="clk(this)">O <br>_ _ _</button>
+                <button class="key" onclick="clk(this)">P <br>. _ _ .</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="clk(this)">A <br>. _</button>
+                <button class="key" onclick="clk(this)">S <br>. . .</button>
+                <button class="key" onclick="clk(this)">D <br>_ . .</button>
+                <button class="key" onclick="clk(this)">F <br>. . _ .</button>
+                <button class="key" onclick="clk(this)">G <br>_ _ .</button>
+                <button class="key" onclick="clk(this)">H <br>. . . .</button>
+                <button class="key" onclick="clk(this)">J <br>. _ _ _</button>
+                <button class="key" onclick="clk(this)">K <br>_ . _</button>
+                <button class="key" onclick="clk(this)">L <br>. _ . .</button>
+            </div>
+            <div class ="row">
+                <button class="key" onclick="clk(this)">Z <br>_ _ . .</button>
+                <button class="key" onclick="clk(this)">X <br>_ . . _</button>
+                <button class="key" onclick="clk(this)">C <br>_ . _ .</button>
+                <button class="key" onclick="clk(this)">V <br>. . . _</button>
+                <button class="key" onclick="clk(this)">B <br>_ . . .</button>
+                <button class="key" onclick="clk(this)">N <br>_ .</button>
+                <button class="key" onclick="clk(this)">M <br>_ _</button>
+            </div>
+        </div>
+    </div>
+    <div id="result" class="result2">Your Morse Code will appear here :</div>
+    <br>
+    <div id="result1" class="result2">Your character will appear here: </div>
+    <script>
+        function clk(button) {
+            // Logic to handle button clicks and display Morse code
+            const morseCode = button.innerText.split('\n')[1].trim();
+            const morseCode1 = button.innerText.split('\n')[0].trim();
+            document.getElementById('result').innerText += morseCode + ' + ';
+            document.getElementById('result1').innerText +=morseCode1;
+
+
+        //     const key = document.getElementsByClassName("key");
+        // const val = document.getElementsByClassName("key").value;
+        // const morse = document.getElementById('result');
+        // morse.innerText=val;
+        }
+       
+    </script>
+</body>
+</html>
